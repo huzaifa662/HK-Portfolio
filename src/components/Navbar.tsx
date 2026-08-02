@@ -26,7 +26,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#home" className="flex items-center gap-3">
           <span className="grid size-9 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-cyan-500 text-sm font-extrabold text-white shadow-[0_0_18px_rgba(139,92,246,0.5)]">
-            LL
+            HU
           </span>
           <span className="text-lg font-bold tracking-tight">
             {profile.name}

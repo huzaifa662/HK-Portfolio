@@ -1,7 +1,7 @@
 export const profile = {
-  name: 'LuauLabs',
+  name: 'Huzaifa',
   tagline: 'Roblox Scripting Services',
-  discord: 'luaulabs_',
+  discord: 'h._.k._.321',
   xUrl: 'https://x.com/luaulabs',
   email: 'contact@luaulabs.dev',
 }
