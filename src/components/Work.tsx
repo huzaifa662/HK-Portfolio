@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Gamepad2, Play } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { projects } from '../data/content'
 
 const cardAnim = {
@@ -43,15 +43,26 @@ export default function Work() {
               className="glass card-glow group flex flex-col overflow-hidden rounded-2xl"
             >
               <div
-                className={`relative h-40 bg-gradient-to-br ${project.gradient} bg-night-soft`}
+                className={`relative aspect-video overflow-hidden bg-gradient-to-br ${project.gradient} bg-night-soft`}
               >
                 <div className="absolute inset-0 grid-bg opacity-60" />
-                <span className="absolute right-4 bottom-3 text-4xl opacity-90 transition-transform duration-300 group-hover:scale-125">
-                  {project.icon}
-                </span>
-                <span className="glass absolute top-3 left-3 rounded-md px-2 py-1 font-mono text-[10px] text-slate-300">
-                  noclip://preview
-                </span>
+                {project.videoUrl.toLowerCase().endsWith('.mp4') ? (
+                  <video
+                    className="relative h-full w-full object-cover"
+                    src={project.videoUrl}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    aria-label={`${project.title} gameplay showcase`}
+                  />
+                ) : (
+                  <div className="relative flex h-full items-center justify-center">
+                    <span className="float-slow text-5xl drop-shadow-[0_0_24px_rgba(168,85,247,0.55)]">
+                      {project.icon}
+                    </span>
+                  </div>
+                )}
               </div>
 
               <div className="flex flex-1 flex-col p-5">
@@ -71,30 +82,16 @@ export default function Work() {
                   ))}
                 </div>
 
-                <div className="mt-5 flex flex-wrap gap-2">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="glass inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold text-emerald-300 transition-all hover:border-emerald-400/40 hover:text-emerald-200"
-                  >
-                    <Gamepad2 size={13} /> Place Demo
-                  </a>
-                  <a
-                    href={project.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="glass inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold text-rose-300 transition-all hover:border-rose-400/40 hover:text-rose-200"
-                  >
-                    <Play size={13} /> Gameplay Showcase
-                  </a>
-                  <a
-                    href="#contact"
-                    className="ml-auto inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-300 transition-colors hover:text-cyan-200"
-                  >
-                    Discuss a build like this <ExternalLink size={14} />
-                  </a>
-                </div>
+                <a
+                  href="#contact"
+                  className="group/cta mt-5 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-cyan-300 transition-colors hover:text-cyan-200"
+                >
+                  Discuss a build like this
+                  <ArrowRight
+                    size={14}
+                    className="transition-transform duration-300 group-hover/cta:translate-x-1"
+                  />
+                </a>
               </div>
             </motion.article>
           ))}

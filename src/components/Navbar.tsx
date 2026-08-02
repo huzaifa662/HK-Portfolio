@@ -32,11 +32,11 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className="sticky top-0 z-50"
     >
-      <div className="mx-auto max-w-6xl px-3 pt-3">
+      <div className="mx-auto max-w-[900px] px-4 pt-3">
         <nav
           ref={capsuleRef}
           onMouseMove={handleMouseMove}
-          className={`liquid-header relative overflow-hidden rounded-2xl border border-white/10 border-t-white/20 border-b-white/20 bg-slate-900/50 shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all duration-300 ${
+          className={`liquid-header relative overflow-hidden rounded-full border border-white/10 border-t-white/20 bg-slate-900/50 shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all duration-300 ${
             scrolled ? 'shadow-[0_8px_40px_rgba(0,0,0,0.6)]' : ''
           }`}
         >
@@ -106,8 +106,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               className="relative border-t border-white/10 p-3 md:hidden"
             >
-              <ul className="space-y-1">
-                {navLinks.map((link) => (
+              <ul className="space-y-1">                {navLinks.map((link) => (
                   <li key={link.href}>
                     <a
                       href={link.href}

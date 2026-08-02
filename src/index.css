@@ -16,6 +16,10 @@ html {
 
 body {
   background-color: var(--color-night);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M56 0H0v56' fill='none' stroke='%233b82f6' stroke-opacity='0.06' stroke-width='1'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #0a0914 0%, #030209 100%);
+  background-attachment: fixed;
   color: #e7e5f2;
   font-family: var(--font-sans);
   overflow-x: hidden;
