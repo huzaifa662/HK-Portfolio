@@ -78,7 +78,7 @@ export default function Work() {
                     rel="noopener noreferrer"
                     className="glass inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold text-emerald-300 transition-all hover:border-emerald-400/40 hover:text-emerald-200"
                   >
-                    <Gamepad2 size={13} /> Try Place Demo
+                    <Gamepad2 size={13} /> Place Demo
                   </a>
                   <a
                     href={project.videoUrl}
@@ -86,7 +86,7 @@ export default function Work() {
                     rel="noopener noreferrer"
                     className="glass inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold text-rose-300 transition-all hover:border-rose-400/40 hover:text-rose-200"
                   >
-                    <Play size={13} /> Watch Gameplay Showcase
+                    <Play size={13} /> Gameplay Showcase
                   </a>
                   <a
                     href="#contact"

@@ -1,16 +1,19 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Check, ClipboardCopy, MessageCircle, Send } from 'lucide-react'
 import { profile, requirements } from '../data/content'
 
 export default function Contact() {
   const [copied, setCopied] = useState(false)
+  const [toastVisible, setToastVisible] = useState(false)
 
   const copyDiscord = async () => {
     try {
       await navigator.clipboard.writeText(profile.discord)
       setCopied(true)
+      setToastVisible(true)
       setTimeout(() => setCopied(false), 2000)
+      setTimeout(() => setToastVisible(false), 2200)
     } catch {
       setCopied(false)
     }
@@ -18,6 +21,26 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative px-5 py-24">
+      <AnimatePresence>
+        {toastVisible && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 12, scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 28 }}
+            className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2"
+          >
+            <div className="liquid-header flex items-center gap-2.5 rounded-full border border-white/10 border-t-white/20 bg-slate-900/70 py-3 pl-4 pr-5 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+              <span className="grid size-6 place-items-center rounded-full bg-emerald-500/20 ring-1 ring-emerald-400/40">
+                <Check size={13} className="text-emerald-300" />
+              </span>
+              <p className="text-sm font-medium text-white">
+                Discord handle copied — {profile.discord}
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_60%,rgba(139,92,246,0.14),transparent_70%)]" />
       <div className="relative mx-auto max-w-3xl">
         <motion.div

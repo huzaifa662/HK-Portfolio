@@ -36,7 +36,7 @@ export default function Navbar() {
         <nav
           ref={capsuleRef}
           onMouseMove={handleMouseMove}
-          className={`liquid-header relative overflow-hidden rounded-2xl border border-white/10 border-t-white/20 border-b-white/20 bg-slate-900/40 shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all duration-300 ${
+          className={`liquid-header relative overflow-hidden rounded-2xl border border-white/10 border-t-white/20 border-b-white/20 bg-slate-900/50 shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all duration-300 ${
             scrolled ? 'shadow-[0_8px_40px_rgba(0,0,0,0.6)]' : ''
           }`}
         >

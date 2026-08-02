@@ -1,4 +1,4 @@
-export const profile = {
+﻿export const profile = {
   name: 'Huzaifa',
   tagline: 'Roblox Scripting Services',
   discord: 'h._.k._.321',
@@ -38,7 +38,7 @@ export const projects: Project[] = [
       'Frame data, hitbox detection, and combo logic with anti-exploit validation and network ownership handled server-side.',
     tags: ['#Luau', '#Knit', '#Hitbox'],
     gradient: 'from-violet-600/40 via-fuchsia-600/30 to-transparent',
-    icon: '⚔️',
+    icon: 'âš”ï¸',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_1',
     videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_1',
   },
@@ -48,7 +48,7 @@ export const projects: Project[] = [
       'ProfileService-driven saves with inventory management, session locking, autosave, and rollback protection.',
     tags: ['#ProfileService', '#DataStore'],
     gradient: 'from-cyan-500/40 via-blue-600/30 to-transparent',
-    icon: '💾',
+    icon: 'ðŸ’¾',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_2',
     videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_2',
   },
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       'Dynamic lighting cycles, ambient audio, and weather states synced across players without hiccups.',
     tags: ['#Lighting', '#Audio'],
     gradient: 'from-sky-500/40 via-indigo-600/30 to-transparent',
-    icon: '🌦️',
+    icon: 'ðŸŒ¦ï¸',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_3',
     videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_3',
   },
@@ -68,7 +68,7 @@ export const projects: Project[] = [
       'Spring-based animations, custom UI components, and framerate-independent motion for buttery menus.',
     tags: ['#Spring', '#UI', '#Fusion'],
     gradient: 'from-purple-600/40 via-pink-600/30 to-transparent',
-    icon: '✨',
+    icon: 'âœ¨',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_4',
     videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_4',
   },
@@ -78,17 +78,17 @@ export const projects: Project[] = [
       'Permission hierarchy, moderation commands, and an in-game admin panel built for fast iteration.',
     tags: ['#Permissions', '#Tools'],
     gradient: 'from-fuchsia-600/40 via-rose-600/30 to-transparent',
-    icon: '🛠️',
+    icon: 'ðŸ› ï¸',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_5',
     videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_5',
   },
   {
     title: 'Emote & Movement Mechanics',
     description:
-      'Networked emotes, animation queues, and movement feel passes — consistent across devices.',
+      'Networked emotes, animation queues, and movement feel passes â€” consistent across devices.',
     tags: ['#Animation', '#Knit', '#Matter'],
     gradient: 'from-teal-500/40 via-emerald-600/30 to-transparent',
-    icon: '🎮',
+    icon: 'ðŸŽ®',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_6',
     videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_6',
   },
@@ -98,34 +98,26 @@ export type Review = {
   handle: string
   quote: string
   project: string
-  initials: string
-  color: string
 }
 
 export const reviews: Review[] = [
   {
     handle: '@matt_9086',
     quote:
-      'Delivered a full combat framework in under a week. The code was immaculate — every system documented, zero lag in 40-player fights. Best hire I have made on DevForum.',
+      'Delivered a full combat framework in under a week. The code was immaculate â€” every system documented, zero lag in 40-player fights. Best hire I have made on DevForum.',
     project: 'Combat System',
-    initials: 'MA',
-    color: 'from-violet-500 to-fuchsia-500',
   },
   {
     handle: '@neonshift',
     quote:
-      'My save system was a nightmare before this. Session locking, inventory, the works — and they answered every question within hours. Communication was perfect.',
+      'My save system was a nightmare before this. Session locking, inventory, the works â€” and they answered every question within hours. Communication was perfect.',
     project: 'Save & Data System',
-    initials: 'NS',
-    color: 'from-cyan-500 to-blue-500',
   },
   {
     handle: '@pixelwyre',
     quote:
-      'Hands down the cleanest Luau I have ever received. Optimized to the point of ridiculousness — frame rate actually improved after they refactored my UI.',
+      'Hands down the cleanest Luau I have ever received. Optimized to the point of ridiculousness â€” frame rate actually improved after they refactored my UI.',
     project: 'Custom UI & Animations',
-    initials: 'PW',
-    color: 'from-purple-500 to-indigo-500',
   },
 ]
 

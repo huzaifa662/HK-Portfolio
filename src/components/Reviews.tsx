@@ -44,19 +44,21 @@ export default function Reviews() {
               </blockquote>
 
               <figcaption className="mt-5 flex items-center gap-3 border-t border-white/10 pt-4">
-                <span
-                  className={`grid size-10 shrink-0 place-items-center rounded-full bg-gradient-to-br ${review.color} text-xs font-bold text-white`}
-                >
-                  {review.initials}
-                </span>
+                <img
+                  src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${review.handle.replace(/[^a-zA-Z0-9]/g, '')}`}
+                  alt={`${review.handle} avatar`}
+                  loading="lazy"
+                  className="size-10 shrink-0 rounded-full ring-2 ring-violet-500/30"
+                />
                 <div>
                   <div className="flex items-center gap-1.5 text-sm font-semibold text-white">
                     {review.handle}
-                    <BadgeCheck size={15} className="fill-sky-500 text-white" />
+                    <span className="inline-flex items-center gap-1 rounded-full bg-sky-500/15 px-2 py-0.5 text-[10px] font-semibold text-sky-300 ring-1 ring-sky-500/30">
+                      <BadgeCheck size={11} className="fill-sky-500 text-white" />
+                      Verified Client
+                    </span>
                   </div>
-                  <p className="text-xs text-slate-500">
-                    Verified Client · {review.project}
-                  </p>
+                  <p className="text-xs text-slate-500">{review.project}</p>
                 </div>
               </figcaption>
             </motion.figure>
