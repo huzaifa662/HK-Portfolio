@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Gamepad2, Play } from 'lucide-react'
 import { projects } from '../data/content'
 
 const cardAnim = {
@@ -71,12 +71,30 @@ export default function Work() {
                   ))}
                 </div>
 
-                <a
-                  href="#contact"
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-300 transition-colors hover:text-cyan-200"
-                >
-                  Discuss a build like this <ExternalLink size={14} />
-                </a>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold text-emerald-300 transition-all hover:border-emerald-400/40 hover:text-emerald-200"
+                  >
+                    <Gamepad2 size={13} /> Try Place Demo
+                  </a>
+                  <a
+                    href={project.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold text-rose-300 transition-all hover:border-rose-400/40 hover:text-rose-200"
+                  >
+                    <Play size={13} /> Watch Gameplay Showcase
+                  </a>
+                  <a
+                    href="#contact"
+                    className="ml-auto inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-300 transition-colors hover:text-cyan-200"
+                  >
+                    Discuss a build like this <ExternalLink size={14} />
+                  </a>
+                </div>
               </div>
             </motion.article>
           ))}

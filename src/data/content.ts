@@ -2,7 +2,7 @@ export const profile = {
   name: 'Huzaifa',
   tagline: 'Roblox Scripting Services',
   discord: 'h._.k._.321',
-  xUrl: 'https://x.com/luaulabs',
+  xUrl: 'https://x.com/GaMiNgExPeRtYt1',
   email: 'contact@luaulabs.dev',
 }
 
@@ -27,6 +27,8 @@ export type Project = {
   tags: string[]
   gradient: string
   icon: string
+  demoUrl: string
+  videoUrl: string
 }
 
 export const projects: Project[] = [
@@ -37,6 +39,8 @@ export const projects: Project[] = [
     tags: ['#Luau', '#Knit', '#Hitbox'],
     gradient: 'from-violet-600/40 via-fuchsia-600/30 to-transparent',
     icon: '⚔️',
+    demoUrl: 'https://www.roblox.com/games/PLACE_ID_1',
+    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_1',
   },
   {
     title: 'Save & Data System',
@@ -45,6 +49,8 @@ export const projects: Project[] = [
     tags: ['#ProfileService', '#DataStore'],
     gradient: 'from-cyan-500/40 via-blue-600/30 to-transparent',
     icon: '💾',
+    demoUrl: 'https://www.roblox.com/games/PLACE_ID_2',
+    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_2',
   },
   {
     title: 'Weather / Environment',
@@ -53,6 +59,8 @@ export const projects: Project[] = [
     tags: ['#Lighting', '#Audio'],
     gradient: 'from-sky-500/40 via-indigo-600/30 to-transparent',
     icon: '🌦️',
+    demoUrl: 'https://www.roblox.com/games/PLACE_ID_3',
+    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_3',
   },
   {
     title: 'Custom UI & Animations',
@@ -61,6 +69,8 @@ export const projects: Project[] = [
     tags: ['#Spring', '#UI', '#Fusion'],
     gradient: 'from-purple-600/40 via-pink-600/30 to-transparent',
     icon: '✨',
+    demoUrl: 'https://www.roblox.com/games/PLACE_ID_4',
+    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_4',
   },
   {
     title: 'Admin Panel & Tools',
@@ -69,6 +79,8 @@ export const projects: Project[] = [
     tags: ['#Permissions', '#Tools'],
     gradient: 'from-fuchsia-600/40 via-rose-600/30 to-transparent',
     icon: '🛠️',
+    demoUrl: 'https://www.roblox.com/games/PLACE_ID_5',
+    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_5',
   },
   {
     title: 'Emote & Movement Mechanics',
@@ -77,6 +89,8 @@ export const projects: Project[] = [
     tags: ['#Animation', '#Knit', '#Matter'],
     gradient: 'from-teal-500/40 via-emerald-600/30 to-transparent',
     icon: '🎮',
+    demoUrl: 'https://www.roblox.com/games/PLACE_ID_6',
+    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_6',
   },
 ]
 
