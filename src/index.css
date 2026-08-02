@@ -45,6 +45,21 @@ body {
   background: #4c3f8f;
 }
 
+/* Cursor-following ambient glow overlay */
+.mouse-glow {
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 30%),
+    rgba(147, 51, 234, 0.15),
+    transparent 80%
+  );
+  transition: opacity 0.3s ease;
+}
+@media (hover: none), (pointer: coarse) {
+  .mouse-glow {
+    display: none;
+  }
+}
+
 /* Liquid glass navbar capsule */
 .liquid-header {
   -webkit-backdrop-filter: blur(12px);
