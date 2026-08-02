@@ -14,7 +14,7 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 pt-28 pb-20">
+    <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 pt-8 pb-20">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(139,92,246,0.18),transparent_70%),radial-gradient(ellipse_40%_40%_at_85%_60%,rgba(34,211,238,0.08),transparent_70%)]" />
       <div className="grid-bg absolute inset-0" />
       <Starfield />

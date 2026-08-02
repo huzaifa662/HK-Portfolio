@@ -41,6 +41,12 @@ body {
   background: #4c3f8f;
 }
 
+/* Liquid glass navbar capsule */
+.liquid-header {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
 /* Frosted glass card */
 .glass {
   background: rgba(255, 255, 255, 0.04);
