@@ -40,7 +40,7 @@ export const projects: Project[] = [
     gradient: 'from-violet-600/40 via-fuchsia-600/30 to-transparent',
     icon: '⚔️',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_1',
-    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_1',
+    videoUrl: '/videos/combat-system.mp4',
   },
   {
     title: 'Save & Data System',
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     gradient: 'from-cyan-500/40 via-blue-600/30 to-transparent',
     icon: '💾',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_2',
-    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_2',
+    videoUrl: '/videos/placement-system.mp4',
   },
   {
     title: 'Weather / Environment',
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     gradient: 'from-sky-500/40 via-indigo-600/30 to-transparent',
     icon: '🌦️',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_3',
-    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_3',
+    videoUrl: '/videos/fully-working-tycoon.mp4',
   },
   {
     title: 'Custom UI & Animations',
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     gradient: 'from-purple-600/40 via-pink-600/30 to-transparent',
     icon: '✨',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_4',
-    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_4',
+    videoUrl: '/videos/rebirth-multiplier.mp4',
   },
   {
     title: 'Admin Panel & Tools',
