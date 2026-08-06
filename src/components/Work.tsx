@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
-import { projects } from '../data/content'
+import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowRight, X } from 'lucide-react'
+import { projects, type Project } from '../data/content'
 
 const cardAnim = {
   hidden: { opacity: 0, y: 30 },
@@ -12,6 +13,21 @@ const cardAnim = {
 }
 
 export default function Work() {
+  const [selected, setSelected] = useState<Project | null>(null)
+
+  useEffect(() => {
+    if (!selected) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelected(null)
+    }
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [selected])
+
   return (
     <section id="work" className="relative px-5 py-24">
       <div className="mx-auto max-w-6xl">
@@ -47,15 +63,22 @@ export default function Work() {
               >
                 <div className="absolute inset-0 grid-bg opacity-60" />
                 {project.videoUrl.toLowerCase().endsWith('.mp4') ? (
-                  <video
-                    className="relative h-full w-full object-cover"
-                    src={project.videoUrl}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    aria-label={`${project.title} gameplay showcase`}
-                  />
+                  <button
+                    type="button"
+                    className="block h-full w-full cursor-pointer"
+                    onClick={() => setSelected(project)}
+                    aria-label={`Enlarge ${project.title} gameplay showcase`}
+                  >
+                    <video
+                      className="relative h-full w-full object-cover"
+                      src={project.videoUrl}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      aria-label={`${project.title} gameplay showcase`}
+                    />
+                  </button>
                 ) : (
                   <div className="relative flex h-full items-center justify-center">
                     <span className="float-slow text-5xl drop-shadow-[0_0_24px_rgba(168,85,247,0.55)]">
@@ -97,6 +120,50 @@ export default function Work() {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selected && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 backdrop-blur-md sm:p-8"
+            onClick={() => setSelected(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${selected.title} video enlarged`}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="relative w-full max-w-5xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                className="absolute -top-12 right-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/25"
+                onClick={() => setSelected(null)}
+                aria-label="Close video"
+              >
+                <X size={20} />
+              </button>
+              <video
+                className="max-h-[75vh] w-full rounded-xl border border-white/15 bg-black object-contain"
+                src={selected.videoUrl}
+                autoPlay
+                loop
+                controls
+                playsInline
+              />
+              <p className="mt-3 text-center font-mono text-sm text-slate-300">
+                {selected.title}
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
