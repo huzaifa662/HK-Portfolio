@@ -83,14 +83,14 @@ export const projects: Project[] = [
     videoUrl: './videos/MatchMaking%20%20-%20Roblox%20Studio%202026-10-24%2000-09-07-compressed.mp4',
   },
   {
-    title: 'Save & Data System',
+    title: 'Inventory System',
     description:
-      'ProfileService-driven saves with inventory management, session locking, autosave, and rollback protection — zero data loss under load.',
-    tags: ['#ProfileService', '#DataStore', '#Inventory'],
+      'Full inventory management with grid-based slots, drag-and-drop, stackable items, weight limits, hotbar quick-access, and ProfileService persistence — built for RPGs and survival games.',
+    tags: ['#Inventory', '#ProfileService', '#DragDrop', '#UI'],
     gradient: 'from-emerald-500/40 via-teal-600/30 to-transparent',
-    icon: '💾',
+    icon: '🎒',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_8',
-    videoUrl: './videos/save-data-system.mp4',
+    videoUrl: './videos/Inventrory%20-%20Roblox%20Studio%202026-10-24%2000-34-22-compressed.mp4',
   },
 ]
 
