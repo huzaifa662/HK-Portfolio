@@ -92,6 +92,16 @@ export const projects: Project[] = [
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_6',
     videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_6',
   },
+  {
+    title: 'Matchmaking System',
+    description:
+      'Skill-based matchmaking with party support, lobby management, queue states, and cross-server teleportation — handles player pools efficiently with minimal wait times.',
+    tags: ['#Matchmaking', '#Lobby', '#Teleport', '#Knit'],
+    gradient: 'from-indigo-500/40 via-purple-600/30 to-transparent',
+    icon: '🔍',
+    demoUrl: 'https://www.roblox.com/games/PLACE_ID_7',
+    videoUrl: './videos/matchmaking.mp4',
+  },
 ]
 
 export type Review = {
