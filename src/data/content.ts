@@ -73,14 +73,14 @@ export const projects: Project[] = [
     videoUrl: './videos/rebirth-multiplier.mp4',
   },
   {
-    title: 'Admin Panel & Tools',
+    title: 'Matchmaking System',
     description:
-      'Permission hierarchy, moderation commands, and an in-game admin panel built for fast iteration.',
-    tags: ['#Permissions', '#Tools'],
-    gradient: 'from-fuchsia-600/40 via-rose-600/30 to-transparent',
-    icon: '🛠️',
-    demoUrl: 'https://www.roblox.com/games/PLACE_ID_5',
-    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_5',
+      'Skill-based matchmaking with party support, lobby management, queue states, and cross-server teleportation — handles player pools efficiently with minimal wait times.',
+    tags: ['#Matchmaking', '#Lobby', '#Teleport', '#Knit'],
+    gradient: 'from-indigo-500/40 via-purple-600/30 to-transparent',
+    icon: '🔍',
+    demoUrl: 'https://www.roblox.com/games/PLACE_ID_7',
+    videoUrl: './videos/matchmaking.mp4',
   },
   {
     title: 'Emote & Movement Mechanics',
