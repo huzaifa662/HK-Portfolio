@@ -82,6 +82,16 @@ export const projects: Project[] = [
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_7',
     videoUrl: './videos/MatchMaking%20%20-%20Roblox%20Studio%202026-10-24%2000-09-07-compressed.mp4',
   },
+  {
+    title: 'Save & Data System',
+    description:
+      'ProfileService-driven saves with inventory management, session locking, autosave, and rollback protection — zero data loss under load.',
+    tags: ['#ProfileService', '#DataStore', '#Inventory'],
+    gradient: 'from-emerald-500/40 via-teal-600/30 to-transparent',
+    icon: '💾',
+    demoUrl: 'https://www.roblox.com/games/PLACE_ID_8',
+    videoUrl: './videos/save-data-system.mp4',
+  },
 ]
 
 export type Review = {
