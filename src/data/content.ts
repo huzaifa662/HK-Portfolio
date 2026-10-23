@@ -80,27 +80,7 @@ export const projects: Project[] = [
     gradient: 'from-indigo-500/40 via-purple-600/30 to-transparent',
     icon: '🔍',
     demoUrl: 'https://www.roblox.com/games/PLACE_ID_7',
-    videoUrl: './videos/matchmaking.mp4',
-  },
-  {
-    title: 'Emote & Movement Mechanics',
-    description:
-      'Networked emotes, animation queues, and movement feel passes — consistent across devices.',
-    tags: ['#Animation', '#Knit', '#Matter'],
-    gradient: 'from-teal-500/40 via-emerald-600/30 to-transparent',
-    icon: '🎮',
-    demoUrl: 'https://www.roblox.com/games/PLACE_ID_6',
-    videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_6',
-  },
-  {
-    title: 'Matchmaking System',
-    description:
-      'Skill-based matchmaking with party support, lobby management, queue states, and cross-server teleportation — handles player pools efficiently with minimal wait times.',
-    tags: ['#Matchmaking', '#Lobby', '#Teleport', '#Knit'],
-    gradient: 'from-indigo-500/40 via-purple-600/30 to-transparent',
-    icon: '🔍',
-    demoUrl: 'https://www.roblox.com/games/PLACE_ID_7',
-    videoUrl: './videos/matchmaking.mp4',
+    videoUrl: './videos/MatchMaking%20%20-%20Roblox%20Studio%202026-10-24%2000-09-07-compressed.mp4',
   },
 ]
 
